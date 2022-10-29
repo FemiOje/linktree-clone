@@ -1,1 +1,1 @@
-# linktree-clone, built with ReactJS.
+# HNG Internship Stage 1 task(linktree clone), built with ReactJS and react-router-dom.
