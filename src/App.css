@@ -1,38 +1,137 @@
-.links{
-  margin: auto 3rem;
+.profile {
+  position: relative;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile > div{
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.profile > div:hover .profile-image {
+  filter: brightness(40%);
+}
+
+.profile > div:hover .profile-overlay {
+  opacity: 1;
+}
+
+.profile-image{
+  opacity: 1;
+  display: block;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.profile-overlay {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.profile > a {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+
+#slack{
+  display: none;
+}
+
+.share-button{
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 1rem;
+  margin-right: 6rem;
+  padding: 0;
+  border: transparent;
+  background: transparent;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.share-button:hover{
+  filter: drop-shadow(1px 1px 2px #666);
+}
+
+.menu-button{
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .share-button{
+    display: none;
+  }
+
+  .menu-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    margin: 0 3rem;
+    float: right;
+    padding: 0;
+    border: transparent;
+    background: transparent;
+    cursor: pointer;
+    transition: 200ms;
+  }
+  .menu-button:hover{
+    filter: drop-shadow(1px 1px 2px #666);
+  }
+}
+
+
+.links {
+  margin: auto 4rem;
   padding: auto;
 }
 
-.links > a > button{
+.links > a > button {
   width: 100%;
+  background-color: #D0D5DD;
   padding: 1rem;
+  transition: .3s ease;
   margin: 0.5rem auto;
   border-color: transparent;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.links > a > button:hover{
-  background-color: #dddcdc;
+.links > a > button:hover {
+  background-color: #98A2B3;
 }
 
-.logos{
+.logos {
   margin: auto 3rem;
   padding: 1rem;
   align-items: center;
   text-align: center;
 }
 
-.logos > *{
+.logos > * {
   padding: 1rem;
 }
 
-footer{
-  margin: auto 3rem;
+footer {
+  margin: auto 4rem;
   padding: auto;
 }
 
-.footer-logos{
+.footer-logos {
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -42,8 +141,8 @@ footer{
   margin-bottom: 2rem;
 }
 
-.footer-text{
-  font-size: 16px;
+.footer-text {
+  font-size: 14px;
   font-weight: 400;
   line-height: 24px;
   color: #667085;
@@ -51,14 +150,11 @@ footer{
 }
 
 @media screen and (max-width: 768px) {
-  .footer-logos{
+  .footer-logos {
     display: flex;
     flex-direction: column;
     text-align: left;
     margin-top: 1rem;
     margin-bottom: 2rem;
-  }
-  .footer-text{
-    text-align: center;
   }
 }
