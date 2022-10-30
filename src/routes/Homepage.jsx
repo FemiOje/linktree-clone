@@ -107,8 +107,12 @@ function Homepage() {
 			</section>
 
 			<section className='logos'>
-				<img src={SlackLogo} alt='slack' />
-				<img src={GitHubLogo} alt='github' />
+				<a href="https://github.com/FemiOje/linktree-clone">
+					<img src={SlackLogo} alt='slack' />
+				</a>
+				<a href="https://github.com/FemiOje/linktree-clone">
+					<img src={GitHubLogo} alt='github' />
+				</a>
 			</section>
 
 			<Footer />
