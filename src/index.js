@@ -8,11 +8,12 @@ import NoMatch from './routes/NoMatch.jsx'
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<Homepage />}>
-      <Route path="/*" element={<NoMatch />} />
-    </Route>)
-    );
+                  createRoutesFromElements(
+                    <Route path="/" element={<Homepage />}>
+                      <Route path="*" element={<NoMatch />} />
+                    </Route>
+                    )
+                  );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
