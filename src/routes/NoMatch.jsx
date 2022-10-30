@@ -1,6 +1,9 @@
 import React from 'react';
-import Footer from '../components/Footer';
+import '../App.css';
 import { Link } from 'react-router-dom';
+import Media from 'react-media';
+import Footer from '../components/Footer';
+
 
 export default function NoMatch() {
 
@@ -19,11 +22,23 @@ export default function NoMatch() {
             </svg>
           </span>
           Go back
-          </Link>
-        <Link to='/' className='take-me-home'>Take me home</Link>
-      </div>
+        </Link>
 
-      <Footer />
+        <Link to='/' className='take-me-home'>
+          Take me home
+        </Link>
+
+        <Media 
+          query="(min-width: 768px)" 
+          render = { () => 
+            (
+              <div className='error-page-footer'>
+                <Footer />
+              </div>
+            )
+          }
+        />
+      </div>
     </div>
   );
 }

@@ -134,6 +134,11 @@ footer {
   padding: auto;
 }
 
+.error-page-footer{
+    position: absolute;
+    bottom: 0;
+}
+
 .footer-logos {
   display: flex;
   flex-direction: row;
@@ -183,10 +188,6 @@ footer {
   .error-page-buttons > *{
     width: 90%;
     margin-bottom: 0.5rem;
-  }
-
-  footer{
-    display: none;
   }
 }
 
