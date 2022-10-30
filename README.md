@@ -1,1 +1,1 @@
-# HNG Internship Stage 1 task(linktree clone), built with ReactJS(v18.2.0) and react-router-dom(v6.4.2).
+# HNG Internship Stage 1 task(linktree clone) built with ReactJS(v18.2.0), react-media and react-router-dom(v6.4.2).
