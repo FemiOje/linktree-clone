@@ -13,8 +13,8 @@ const router = createBrowserRouter([
     element: <Homepage />
   },
   {
-        path: "*",
-        element: <NoMatch />
+      path: "/*",
+      element: <NoMatch />
   },
     ]);
 
