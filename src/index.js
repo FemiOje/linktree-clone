@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css';
 import App from './App';
-import NoMatch from './NoMatch.jsx'
-import reportWebVitals from './reportWebVitals';
 import Homepage from './routes/Homepage';
+import NoMatch from './routes/NoMatch.jsx'
+import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
   {

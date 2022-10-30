@@ -36,11 +36,11 @@ function Homepage() {
 				<p id='slack'>Oluwafemi Ojetokun</p>
 
 				<button className='share-button'>
-					<img src={shareButton} alt='share' title='share' />
+					<img src={shareButton} alt='share' title='Share link' />
 				</button>
 
 				<button className='menu-button'>
-					<img src={menuButton} alt='menu' title='menu' />
+					<img src={menuButton} alt='menu' title='Menu' />
 				</button>
 			</section>
 
