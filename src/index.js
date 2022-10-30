@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Routes, Route } from "react-router-dom";
 import './index.css';
 import App from './App';
 import Homepage from './routes/Homepage';
@@ -10,12 +10,13 @@ import reportWebVitals from './reportWebVitals';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <NoMatch />,
+    element: <Homepage />,
     errorElement: <NoMatch />,
   },
   {
     path: "/*",
     element: <NoMatch />,
+    errorElement: <NoMatch />
   },
 ]);
 
@@ -23,7 +24,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <RouterProvider router={router} />
+    <RouterProvider router={router}>
+      <Routes>
+        <Route path='/' component={Homepage}>
+          <Route path='*' component={NoMatch} />
+        </Route>
+      </Routes>
+    </RouterProvider>
   </React.StrictMode>
 );
 
