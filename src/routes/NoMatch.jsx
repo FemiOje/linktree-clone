@@ -1,16 +1,29 @@
-import React from 'react'
-import { useRouteError } from "react-router-dom";
+import React from 'react';
+import Footer from './components/Footer';
+import { Link } from 'react-router-dom';
 
 export default function NoMatch() {
-  const error = useRouteError();
-  console.error(error);
 
   return (
     <div id="error-page">
-      <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p>
-        <i>{error.statusText || error.message}</i>
-      </p>
+      <p className='error-404'>404 Error!</p>
+      <h1>We can't find that page.</h1>
+      <p>Sorry, the page you are looking for doesn't exist.</p>
+      <br />
+
+      <div className='error-page-buttons'>
+        <Link to='/' className='go-back'>
+          <span className='go-back-arrow'>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="#344054" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          Go back
+          </Link>
+        <Link to='/' className='take-me-home'>Take me home</Link>
+      </div>
+
+      <Footer />
     </div>
   );
+}

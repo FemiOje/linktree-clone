@@ -10,13 +10,11 @@ import Homepage from './routes/Homepage';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Homepage />,
-    errorElement: <NoMatch />
+    element: <Homepage />
   },
   {
         path: "*",
-        element: <NoMatch />,
-        errorElement: <NoMatch />,
+        element: <NoMatch />
   },
     ]);
 
