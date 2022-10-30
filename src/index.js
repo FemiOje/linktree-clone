@@ -26,7 +26,7 @@ root.render(
     <App />
     <RouterProvider router={router}>
       <Routes>
-        <Route path='/' component={Homepage}>
+        <Route path='/' component={NoMatch}>
           <Route path='*' component={NoMatch} />
         </Route>
       </Routes>
