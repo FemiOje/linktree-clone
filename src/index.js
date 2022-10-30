@@ -1,20 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider, createRoutesFromElements, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css';
 import App from './App';
 import Homepage from './routes/Homepage';
 import NoMatch from './routes/NoMatch.jsx'
 import reportWebVitals from './reportWebVitals';
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Routes>
-      <Route path="/" element={<Homepage />} />
-      <Route path="/*" element={<NoMatch />} />
-    </Routes>
-  )
-);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Homepage />,
+    errorElement: <NoMatch />,
+  },
+  {
+    path: "/*",
+    element: <NoMatch />,
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
