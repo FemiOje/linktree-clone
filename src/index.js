@@ -1,29 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import './index.css';
-import App from './App';
-import Homepage from './routes/Homepage';
-import NoMatch from './routes/NoMatch.jsx'
+import Homepage from './routes/Homepage.jsx';
+import NoMatch from './routes/NoMatch.jsx';
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <NoMatch />,
-    errorElement: <NoMatch />,
-  },
-  {
-    path: "/*",
-    element: <NoMatch />,
-    errorElement: <NoMatch />
+    element: <Homepage />,
+    children: [
+      {
+        path: "*",
+        element: <NoMatch />,
+      },
+    ],
   },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
     <RouterProvider router={router} />
   </React.StrictMode>
 );
