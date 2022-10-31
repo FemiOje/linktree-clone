@@ -1,6 +1,7 @@
 import '../App.css';
 import SlackLogo from '../images/slack-logo.png';
 import GitHubLogo from '../images/github-logo.png';
+import ProfilePhoto from '../images/Oluwafemi-profile-pic.jpg';
 import profileImg from '../images/profile__img.png';
 import shareButton from '../images/share-button.png';
 import menuButton from '../images/menu-button.png';
@@ -12,7 +13,7 @@ function Homepage() {
 			<section className='profile'>
 				<div className='profile-image-container'>
 					<img
-						src={profileImg}
+						src={ProfilePhoto}
 						className='profile-image'
 						alt='profile'
 					/>
@@ -30,7 +31,7 @@ function Homepage() {
 				<br />
 
 				<a id='twitter' href='https://wwww.twitter.com/FemiOje'>
-					<strong>Oluwafemi Ojetokun</strong>
+					<strong>@OjetokunF</strong>
 				</a>
 
 				<p id='slack'>Oluwafemi Ojetokun</p>
