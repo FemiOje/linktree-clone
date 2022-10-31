@@ -29,7 +29,7 @@ function Homepage() {
 				<br />
 				<br />
 
-				<a id='twitter' href='https://wwww.twitter.com/FemiOje'>
+				<a id='twitter' href='https://www.twitter.com/OjetokunF'>
 					<strong>@OjetokunF</strong>
 				</a>
 
