@@ -2,7 +2,6 @@ import '../App.css';
 import SlackLogo from '../images/slack-logo.png';
 import GitHubLogo from '../images/github-logo.png';
 import ProfilePhoto from '../images/Oluwafemi-profile-pic.jpg';
-import profileImg from '../images/profile__img.png';
 import shareButton from '../images/share-button.png';
 import menuButton from '../images/menu-button.png';
 import Footer from '../components/Footer';
