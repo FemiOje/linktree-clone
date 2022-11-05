@@ -5,20 +5,20 @@
   margin-bottom: 2rem;
 }
 
-.profile > div{
+.profile>div {
   margin: 0 auto;
   width: fit-content;
 }
 
-.profile > div:hover .profile-image {
+.profile>div:hover .profile-image {
   filter: brightness(40%);
 }
 
-.profile > div:hover .profile-overlay {
+.profile>div:hover .profile-overlay {
   opacity: 1;
 }
 
-.profile-image{
+.profile-image {
   opacity: 1;
   display: block;
   margin: auto;
@@ -40,17 +40,17 @@
   text-align: center;
 }
 
-.profile > a {
+.profile>a {
   color: black;
   text-align: center;
   text-decoration: none;
 }
 
-#slack{
+#slack {
   display: none;
 }
 
-.share-button{
+.share-button {
   display: flex;
   position: absolute;
   top: 0;
@@ -64,20 +64,20 @@
   transition: 200ms;
 }
 
-.share-button:hover{
+.share-button:hover {
   filter: drop-shadow(1px 1px 2px #666);
 }
 
-.menu-button{
+.menu-button {
   display: none;
 }
 
 @media screen and (max-width: 768px) {
-  .share-button{
+  .share-button {
     display: none;
   }
 
-  .menu-button{
+  .menu-button {
     position: absolute;
     top: 0;
     right: 0;
@@ -90,7 +90,8 @@
     cursor: pointer;
     transition: 200ms;
   }
-  .menu-button:hover{
+
+  .menu-button:hover {
     filter: drop-shadow(1px 1px 2px #666);
   }
 }
@@ -101,7 +102,7 @@
   padding: auto;
 }
 
-.links > a > button {
+.links>a>button {
   width: 100%;
   background-color: #D0D5DD;
   padding: 1rem;
@@ -112,7 +113,7 @@
   cursor: pointer;
 }
 
-.links > a > button:hover {
+.links>a>button:hover {
   background-color: #98A2B3;
 }
 
@@ -123,7 +124,7 @@
   text-align: center;
 }
 
-.logos > * {
+.logos>* {
   padding: 1rem;
 }
 
@@ -135,9 +136,9 @@ footer {
   padding: auto;
 }
 
-.error-page-footer{
-    position: absolute;
-    bottom: 0;
+.error-page-footer {
+  position: absolute;
+  bottom: 0;
 }
 
 .footer-logos {
@@ -171,40 +172,41 @@ footer {
 
 
 /* ERROR PAGE */
-#error-page{
+#error-page {
   margin: 6rem 4rem;
 }
 
-.error-404{
+.error-404 {
   color: #5925DC;
 }
 
-@media screen and (max-width: 768px){
-  .error-page-buttons{
+@media screen and (max-width: 768px) {
+  .error-page-buttons {
     text-align: center;
     display: flex;
     flex-direction: column-reverse;
   }
 
-  .error-page-buttons > *{
+  .error-page-buttons>* {
     width: 90%;
     margin-bottom: 0.5rem;
   }
 }
 
 
-.go-back, .take-me-home{
+.go-back,
+.take-me-home {
   border-radius: 8px;
   padding: 1rem;
   margin-right: 1rem;
   text-decoration: none;
 }
 
-.go-back-arrow{
+.go-back-arrow {
   vertical-align: middle;
 }
 
-.go-back{
+.go-back {
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -214,11 +216,11 @@ footer {
   transition: all 300ms ease;
 }
 
-.go-back:hover{
+.go-back:hover {
   background-color: #cecbcb;
 }
 
-.take-me-home{
+.take-me-home {
   border: none;
   font-size: 14px;
   font-style: normal;
@@ -228,6 +230,75 @@ footer {
   transition: all 300ms ease;
 }
 
-.take-me-home:hover{
+.take-me-home:hover {
   background-color: #461cb8;
+}
+
+
+
+/* CONTACT PAGE */
+#contact-page {
+  margin: 2rem auto;
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+@media screen and (max-width: 768px) {
+  #contact-page{
+    width: 90vw;
+    margin: 0 auto;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+  }
+}
+
+.names-grid {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-column-gap: 2rem;
+  width: 95%;
+}
+
+@media screen and (max-width: 768px) {
+  .names-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#first_name, #last_name,
+#email, #message,
+textarea {
+  border: 1px solid #D0D5DD;
+  border-radius: 8px;
+  height: 44px;
+  margin-bottom: 1rem;
+  width: 90%;
+  font-size: medium;
+  padding-inline: 15px;
+  vertical-align: middle;
+}
+
+textarea{
+  min-height: 7rem;
+}
+
+label{
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.send-message {
+  background-color: #1570EF;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  height: 3rem;
+  width: 100%;
+  margin: 3rem auto;
+  font-size: 16px;
 }

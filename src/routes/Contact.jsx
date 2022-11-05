@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "../App.css";
+import Footer from "../components/Footer";
 
 const Contact = () => {
     const [contactForm, setContactForm] = useState(
@@ -26,79 +28,90 @@ const Contact = () => {
     }
 
     return (
-        <main id="contact-page">
-            <h1>Contact Me</h1>
+        <>
+            <main id="contact-page">
+                <h1>Contact Me</h1>
+                <p>Hi there, contact me to ask me about anything you have in mind.</p>
+                <br />
+                <br />
 
-            <p>Hi there, contact me to ask me about anything you have in mind.</p>
+                <form id="contact-form" onSubmit={handleSubmit}>
+                    <div className="names-grid">
+                        <div className="first-name">
+                            <label htmlFor="first_name">First Name</label>
+                            <input
+                                type="text"
+                                name="firstName"
+                                id="first_name"
+                                placeholder="Enter your first name"
+                                value={contactForm.firstName}
+                                onChange={handleChange}
+                            />
+                        </div>
 
-            <form id="contact-form" onSubmit={handleSubmit}>
-                <label htmlFor="firstName"></label>
-                <input
-                    type="text"
-                    name="firstName"
-                    id="firstNname"
-                    placeholder="Enter your first name"
-                    value={contactForm.firstName}
-                    onChange={handleChange}
-                />
-                <br/>
+                        <div className="last-name">
+                            <label htmlFor="last_name">Last Name</label>
+                            <input
+                                type="text"
+                                name="lastName"
+                                id="last_name"
+                                placeholder="Enter your last name"
+                                value={contactForm.lastName}
+                                onChange={handleChange}
+                            />
+                        </div>
+                    </div>
 
-                <label htmlFor="lastName"></label>
-                <input
-                    type="text"
-                    name="lastName"
-                    id="lastNname"
-                    placeholder="Enter your last name"
-                    value={contactForm.lastName}
-                    onChange={handleChange}
-                />
-                <br/>
+                    <label htmlFor="email">Email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="yourname@email.com"
+                        value={contactForm.email}
+                        onChange={handleChange}
+                    />
+                    <br />
 
-                <label htmlFor="email"></label>
-                <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="yourname@email.com"
-                    value={contactForm.email}
-                    onChange={handleChange}
-                />
-                <br/>
+                    <label htmlFor="message">Message</label>
+                    <textarea
+                        name="message"
+                        id="message"
+                        placeholder="Send me a message and I'll reply you as soon as possible..."
+                        value={contactForm.message}
+                        onChange={handleChange}
+                    />
+                    <br />
+                    <br />
 
-                <label htmlFor="message"></label>
-                <textarea
-                    name="message"
-                    id="message"
-                    placeholder="Send me a message and I'll reply you as soon as possible..."
-                    value={contactForm.message}
-                    onChange={handleChange}
-                />
-                <br/>
+                    <label htmlFor="isProvidingData">
+                        <input
+                            type="checkbox"
+                            name="isProvidingData"
+                            id="isProvidingData"
+                            checked={contactForm.isProvidingData}
+                            onChange={handleChange}
+                        />
+                        <span>
+                            You agree to providing your data to Oluwafemi Ojetokun, who may contact you.
+                        </span>
+                    </label>
 
-                <input
-                    type="checkbox"
-                    name="isProvidingData"
-                    id="isProvidingData"
-                    checked={contactForm.isProvidingData}
-                    onChange={handleChange}
-                />
-                <label htmlFor="isProvidingData">
-                    You agree to providing your data to Oluwafemi Ojetokun, who may contact you.
-                </label>
-                <br/>
+                    <button 
+                    type="submit" 
+                    id="btn__submit"
+                    className="send-message"
+                    >
+                        Send message
+                    </button>
 
-                <button type="submit" className="submit-button">Send message</button>
-
-            </form>
+                </form>
 
 
+            </main>
 
-
-
-
-
-
-        </main>
+            <Footer />
+        </>
     )
 }
 
