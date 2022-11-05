@@ -1,4 +1,5 @@
 import '../App.css';
+import { Link } from 'react-router-dom';
 import SlackLogo from '../images/slack-logo.png';
 import GitHubLogo from '../images/github-logo.png';
 import ProfilePhoto from '../images/Oluwafemi-profile-pic.jpg';
@@ -102,6 +103,16 @@ function Homepage() {
 				>
 					<button>Design Books</button>
 				</a>
+				<br />
+
+				<Link
+					to='/contact'
+					id='contact'
+					target={'_blank'}
+					rel="noreferrer"
+				>
+					<button>Contact Me</button>
+				</Link>
 				<br />
 
 			</section>
